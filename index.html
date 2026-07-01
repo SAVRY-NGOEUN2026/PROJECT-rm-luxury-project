@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RM LUXURY - Clothes Collection</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topbar">Free Shipping Over <strong>$50</strong> &nbsp;|&nbsp; SS 2026 &nbsp;|&nbsp; Ships to Cambodia and Worldwide</div>
+<div class="ann-bar"><div class="ann-track">
+<span>Women SS 2026 <strong>New Arrivals</strong></span>
+<span>Men Style Edit <strong>Smart Casual and Streetwear</strong></span>
+<span>Use code <strong>RMLUX40</strong> for 40 percent off</span>
+<span>Free shipping over <strong>$50</strong></span>
+<span>Women SS 2026 <strong>New Arrivals</strong></span>
+<span>Men Style Edit <strong>Smart Casual and Streetwear</strong></span>
+<span>Use code <strong>RMLUX40</strong> for 40 percent off</span>
+<span>Free shipping over <strong>$50</strong></span>
+</div></div>
+<nav class="mnav py-2">
+<div class="container-fluid px-4">
+<div class="d-flex align-items-center gap-2 flex-wrap">
+<a href="#" class="nlogo me-3">RM LUXURY<small>Clothes Collection</small></a>
+<div class="d-flex gap-1">
+<button class="ntab a on" id="tA" onclick="swG('all')">All</button>
+<button class="ntab w" id="tW" onclick="swG('women')">Women</button>
+<button class="ntab m" id="tM" onclick="swG('men')">Men</button>
+</div>
+<div class="d-flex position-relative" style="max-width:420px;flex:1;">
+<input type="text" id="sIn" class="form-control si" placeholder="Search fashion..." oninput="lSrch(this.value)" onkeydown="if(event.key==='Enter')dSrch()">
+<button class="sb" onclick="dSrch()"><span class="icn-svg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg></span></button>
+<div class="sdrop" id="sDrop"></div>
+</div>
+<div class="d-flex align-items-center gap-1 ms-auto">
+<button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" title="Toggle dark mode"><span class="icn-svg" id="themeIcon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span></button>
+<button class="nic" onclick="openAuth()" title="Account / Sign In"><span class="icn-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path></svg></span></button>
+<button class="nic"><span class="icn-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 9.5 7c-2.5 4.5-9.5 9-9.5 9z"></path></svg></span></button>
+<button class="nic" data-bs-toggle="offcanvas" data-bs-target="#cOC"><span class="icn-svg"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1.2 12.5a1.5 1.5 0 0 1-1.5 1.5H6.3a1.5 1.5 0 0 1-1.5-1.5L6 8z"></path><path d="M9 8V6a3 3 0 1 1 6 0v2"></path></svg></span><span class="cbadge" id="cCnt">0</span></button>
+</div>
+</div>
+</div>
+</nav>
+<div class="cs wm" id="cStr"><div class="d-flex px-3" id="cPls"></div></div>
+<section class="hero wh" id="hSec">
+<div class="container-fluid px-4">
+<div class="row align-items-center">
+<div class="col-lg-6" style="position:relative;z-index:1">
+<div class="hlbl" id="hLbl">SS 2026 Collection</div>
+<h1 class="httl" id="hTtl">RM LUXURY<br><em>Collection</em></h1>
+<p class="hsub" id="hSub">Curated luxury for women and men. Ships to Cambodia and worldwide.</p>
+<div class="d-flex gap-3 flex-wrap">
+<button class="bp w" id="hBS" onclick="document.getElementById('prods').scrollIntoView({behavior:'smooth'})"><span class="icn-svg me-2"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><path d='M6 8h12l1.3 12.4c.1.9-.6 1.6-1.5 1.6H6.2c-.9 0-1.6-.7-1.5-1.6L6 8z'/><path d='M9 8V6a3 3 0 1 1 6 0v2' fill='none' stroke='currentColor' stroke-width='2'/></svg></span>Shop Now</button>
+<button class="bpo" onclick="fcCat('new',null)">New Arrivals</button>
+</div>
+<div class="hst">
+<div><div class="sn" id="hS1">19</div><div class="sl">Styles</div></div>
+<div><div class="sn" id="hS2">9</div><div class="sl">Collections</div></div>
+<div><div class="sn">KH</div><div class="sl">Cambodia</div></div>
+</div>
+</div>
+<div class="col-lg-6 mt-4 mt-lg-0">
+<div class="d-flex gap-2 align-items-flex-end justify-content-center" id="hImg"></div>
+</div>
+</div>
+</div>
+</section>
+<div id="tStI"></div>
+<div class="fbar" id="prods">
+<div class="container-fluid px-4">
+<div class="d-flex align-items-center gap-2 flex-wrap">
+<span style="font-size:12px;color:var(--tl)" id="rTx">Showing items</span>
+<div class="d-flex gap-2 flex-wrap ms-2" id="fPls"></div>
+<select class="ss ms-auto" onchange="dSort(this.value)">
+<option value="feat">Sort: Featured</option>
+<option value="low">Price: Low to High</option>
+<option value="high">Price: High to Low</option>
+<option value="rate">Top Rated</option>
+</select>
+</div>
+</div>
+</div>
+<section class="py-4">
+<div class="container-fluid px-4">
+<div class="row g-4">
+<div class="col-lg-2 col-md-3 d-none d-md-block"><div class="sbar" id="sBr"></div></div>
+<div class="col-lg-10 col-md-9">
+<div class="row g-3" id="pgrid"></div>
+<div id="noRes" class="text-center py-5 d-none"><div style="font-size:48px;margin-bottom:12px">&#128269;</div><div style="font-size:15px;color:var(--tl)">No products found.</div></div>
+<div class="mt-4" id="prBox"></div>
+</div>
+</div>
+</div>
+</section>
+<div class="stst"><div class="container-fluid px-4"><div class="row g-0 text-center">
+<div class="col-6 col-md-3 sti"><div class="stn">35+</div><div class="stl">Total Styles</div></div>
+<div class="col-6 col-md-3 sti"><div class="stn">2</div><div class="stl">Collections</div></div>
+<div class="col-6 col-md-3 sti"><div class="stn">KH</div><div class="stl">Cambodia Based</div></div>
+<div class="col-6 col-md-3 sti"><div class="stn">50+</div><div class="stl">Countries Shipped</div></div>
+</div></div></div>
+<section class="nlsc w" id="nlSc">
+<div class="container-fluid px-4">
+<h2 id="nlTt">JOIN THE RM LUXURY FAMILY</h2>
+<p id="nlSb">Exclusive deals and new arrivals straight to your inbox.</p>
+<div class="nlw"><input type="email" id="nlE" class="nli w" placeholder="Enter your email..."><button class="nlb w" onclick="subNL()">Subscribe</button></div>
+</div>
+</section>
+<footer class="ftl w" id="sFtr">
+<div class="container-fluid px-4">
+<div class="row g-4 mb-4">
+<div class="col-lg-4">
+<div class="flo">RM LUXURY</div>
+<span class="fsu w">Clothes Collection</span>
+<p style="font-size:12px;color:rgba(255,255,255,.55);max-width:230px;line-height:1.8;margin-top:12px;">Curated luxury fashion for women and men. Ships to Cambodia and worldwide.</p>
+<div class="mt-3">
+<a class="fso w" href="#"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><rect x='3' y='3' width='18' height='18' rx='5'/><circle cx='12' cy='12' r='4'/><circle cx='17.5' cy='6.5' r='1' fill='currentColor' stroke='none'/></svg></span></a>
+<a class="fso w" href="#"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><path d='M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.5.3v2.7h-1.4c-1.4 0-1.8.8-1.8 1.7V12h3.1l-.5 2.9h-2.6v7A10 10 0 0 0 22 12z'/></svg></span></a>
+<a class="fso w" href="#"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><path d='M16 3c.5 2 2 3.5 4 3.8v2.7c-1.6 0-3-.5-4.2-1.3v6.3a5.3 5.3 0 1 1-5.3-5.3c.3 0 .6 0 .9.1v2.7a2.6 2.6 0 1 0 1.8 2.5V3h2.8z'/></svg></span></a>
+<a class="fso w" href="#"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linejoin='round'><rect x='2' y='5.5' width='20' height='13' rx='3'/><path d='M10 9l5 3-5 3V9z' fill='currentColor' stroke='none'/></svg></span></a>
+</div>
+</div>
+<div class="col-6 col-lg-2"><div class="fh w">Shop Women</div><a class="fl w" href="javascript:void(0)" onclick="goShop('women','all')">All Items</a><a class="fl w" href="javascript:void(0)" onclick="goShop('women','street')">Y2K Street</a><a class="fl w" href="javascript:void(0)" onclick="goShop('women','dress')">Dresses</a><a class="fl w" href="javascript:void(0)" onclick="goShop('women','outerwear')">Outerwear</a></div>
+<div class="col-6 col-lg-2"><div class="fh w">Shop Men</div><a class="fl w" href="javascript:void(0)" onclick="goShop('men','all')">All Items</a><a class="fl w" href="javascript:void(0)" onclick="goShop('men','street')">Streetwear</a><a class="fl w" href="javascript:void(0)" onclick="goShop('men','smart')">Smart Casual</a><a class="fl w" href="javascript:void(0)" onclick="goShop('men','formal')">Formal</a></div>
+<div class="col-6 col-lg-2"><div class="fh w">Help</div><a class="fl w" href="#">Track Order</a><a class="fl w" href="#">Returns</a><a class="fl w" href="#">Size Guide</a><a class="fl w" href="#">Contact</a></div>
+<div class="col-6 col-lg-2">
+<div class="fh w">Contact</div>
+<p style="font-size:12px;color:rgba(255,255,255,.55);line-height:2"><span class="icn-svg me-2"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z'/><circle cx='12' cy='10' r='2.5'/></svg></span>Phnom Penh, Cambodia<br><span class="icn-svg me-2"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='5' width='18' height='14' rx='2'/><path d='M3 7l9 6 9-6'/></svg></span>hello@rmluxury.com</p>
+<div class="d-flex gap-2 flex-wrap mt-2">
+<span style="background:rgba(255,255,255,.12);border-radius:4px;padding:3px 8px;font-size:10px;color:#fff">VISA</span>
+<span style="background:rgba(255,255,255,.12);border-radius:4px;padding:3px 8px;font-size:10px;color:#fff">ABA</span>
+<span style="background:rgba(255,255,255,.12);border-radius:4px;padding:3px 8px;font-size:10px;color:#fff">KHQR</span>
+</div>
+</div>
+</div>
+<hr style="border-color:rgba(255,255,255,.1);margin:18px 0 12px">
+<div class="d-flex justify-content-between flex-wrap gap-2" style="font-size:11px;color:rgba(255,255,255,.3)">
+<span>2026 RM Luxury All rights reserved</span><span>Privacy Policy Terms</span>
+</div>
+</div>
+</footer>
+<div class="modal fade pdm" id="pdMod" tabindex="-1">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="row g-0">
+<div class="col-md-5 pdip w" id="pdIP">
+<div class="pdmi"><img src="" id="pdImg" alt=""></div>
+<div class="pdtr w" id="pdTr"></div>
+</div>
+<div class="col-md-7 pdrp">
+<button class="btn-close float-end" data-bs-dismiss="modal"></button>
+<div class="pdcl w" id="pdCat"></div>
+<div class="pdnm" id="pdNm"></div>
+<div class="d-flex align-items-center gap-2 mb-2"><span id="pdSt" style="font-size:13px"></span><span id="pdRv" style="font-size:11px;color:var(--tl)"></span></div>
+<div class="d-flex align-items-baseline gap-2 mb-2"><span class="pdpr w" id="pdPr"></span><span class="pdol" id="pdOl" style="display:none"></span><span class="pdof w" id="pdOf" style="display:none"></span></div>
+<hr class="pddv w" id="pdDv">
+<div class="pdlb mb-2">COLOR: <span id="pdCl"></span></div>
+<div class="d-flex gap-2 flex-wrap mb-3" id="pdCols"></div>
+<div class="d-flex justify-content-between align-items-center mb-2"><div class="pdlb">SIZE: <span id="pdSzL">Select</span></div></div>
+<div class="d-flex gap-2 flex-wrap mb-3" id="pdSzs"></div>
+<div class="pdlb mb-2">QTY:</div>
+<div class="qw w mb-3" id="pdQW"><button class="qb w" onclick="chQ(-1)">-</button><div class="qn" id="pdQ">1</div><button class="qb w" onclick="chQ(1)">+</button></div>
+<button class="pda w" id="pdAdd" onclick="addMod()"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 8h12l1.2 12.5a1.5 1.5 0 0 1-1.5 1.5H6.3a1.5 1.5 0 0 1-1.5-1.5L6 8z'/><path d='M9 8V6a3 3 0 1 1 6 0v2'/><line x1='12' y1='11.5' x2='12' y2='16.5'/><line x1='9.5' y1='14' x2='14.5' y2='14'/></svg></span> ADD TO CART</button>
+<button class="pdb w" id="pdBuy" onclick="buyNow()"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><path d='M13 2L4 14h6l-1 8 9-12h-6l1-8z'/></svg></span> BUY NOW</button>
+<div class="tg" id="pdTrust"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas offcanvas-end oc-c" id="cOC" tabindex="-1">
+<div class="offcanvas-header"><h5 class="offcanvas-title fw-bold"><span class="icn-svg me-2"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 8h12l1.2 12.5a1.5 1.5 0 0 1-1.5 1.5H6.3a1.5 1.5 0 0 1-1.5-1.5L6 8z'/><path d='M9 8V6a3 3 0 1 1 6 0v2'/></svg></span>Your Cart</h5><button class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+<div class="offcanvas-body p-3" id="cBody"><div class="text-center py-5"><span class="icn-svg" style="font-size:46px;color:#eee"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 8h12l1.2 12.5a1.5 1.5 0 0 1-1.5 1.5H6.3a1.5 1.5 0 0 1-1.5-1.5L6 8z'/><path d='M9 8V6a3 3 0 1 1 6 0v2'/></svg></span><div class="mt-3" style="font-size:14px;color:var(--tl)">Your cart is empty.</div></div></div>
+<div class="cbar"><div class="d-flex justify-content-between mb-3"><span class="fw-bold" style="font-size:15px">Total</span><span class="fw-bold" style="font-size:17px" id="cTot">$0.00</span></div><button class="ckb" onclick="checkout()">Checkout</button></div>
+</div>
+<div class="toast-box" id="tBox"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><circle cx='12' cy='12' r='10'/><path d='M8 12.5l2.5 2.5L16 9' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg></span><span id="tMsg">Done</span></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+
+<div class="modal fade cko" id="ckoMod" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div id="ckoContent">
+        <div class="cko-hdr d-flex justify-content-between align-items-center">
+          <h5><span class="icn-svg me-2"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 8h12l1.2 12.5a1.5 1.5 0 0 1-1.5 1.5H6.3a1.5 1.5 0 0 1-1.5-1.5L6 8z'/><path d='M9 8V6a3 3 0 1 1 6 0v2'/><path d='M9.5 13.5l1.8 1.8 3.2-3.6'/></svg></span>Checkout</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="cko-body">
+          <div class="cko-sec-lbl">Contact Information</div>
+          <input type="text" class="cko-input" id="ckName" placeholder="Full Name">
+          <div class="cko-err" id="ckErrName">Please enter your full name</div>
+          <input type="tel" class="cko-input" id="ckPhone" placeholder="Phone Number">
+          <div class="cko-err" id="ckErrPhone">Please enter a valid phone number</div>
+          <input type="email" class="cko-input" id="ckEmail" placeholder="Email Address">
+          <div class="cko-err" id="ckErrEmail">Please enter a valid email address</div>
+
+          <div class="cko-sec-lbl">Shipping Address</div>
+          <input type="text" class="cko-input" id="ckAddr" placeholder="Street Address / House No.">
+          <div class="cko-err" id="ckErrAddr">Please enter your address</div>
+          <div class="cko-row">
+            <input type="text" class="cko-input" id="ckCity" placeholder="City / Province">
+            <input type="text" class="cko-input" id="ckPost" placeholder="Postal Code (optional)">
+          </div>
+          <div class="cko-err" id="ckErrCity">Please enter your city or province</div>
+          <textarea class="cko-input" id="ckNote" placeholder="Order Note (optional) - e.g. landmark, delivery time" style="resize:none;height:60px;"></textarea>
+
+          <div class="cko-sec-lbl">Payment Method</div>
+          <label class="pay-opt" id="payCOD"><input type="radio" name="payM" value="cod" checked onchange="selPay(this)"><span class="pic"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='9' cy='14' r='6'/><path d='M9 11.5v5M7.3 12.7h3.4M7.3 15.3h3.4'/><path d='M15 6h6v6'/><path d='M21 6L13 14'/></svg></span></span><span><span class="ptxt">Cash on Delivery</span><br><span class="psub">Pay when your order arrives</span></span></label>
+          <label class="pay-opt" id="payABA"><input type="radio" name="payM" value="aba" onchange="selPay(this)"><span class="pic"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='5' width='20' height='14' rx='2'/><line x1='2' y1='10' x2='22' y2='10'/><rect x='5' y='13' width='5' height='3' rx='0.5' fill='currentColor' stroke='none'/></svg></span></span><span><span class="ptxt">ABA / Bank Transfer</span><br><span class="psub">Transfer to RM Luxury bank account</span></span></label>
+          <label class="pay-opt" id="payKHQR"><input type="radio" name="payM" value="khqr" onchange="selPay(this)"><span class="pic"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><rect x='3' y='3' width='6' height='6'/><rect x='15' y='3' width='6' height='6'/><rect x='3' y='15' width='6' height='6'/><rect x='15' y='15' width='2.5' height='2.5'/><rect x='18.5' y='15' width='2.5' height='2.5'/><rect x='15' y='18.5' width='2.5' height='2.5'/><rect x='18.5' y='18.5' width='2.5' height='2.5'/></svg></span></span><span><span class="ptxt">KHQR</span><br><span class="psub">Scan to pay with any banking app</span></span></label>
+          <label class="pay-opt" id="payCARD"><input type="radio" name="payM" value="card" onchange="selPay(this)"><span class="pic"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='5' width='20' height='14' rx='2'/><line x1='2' y1='10' x2='22' y2='10'/></svg></span></span><span><span class="ptxt">Credit / Debit Card</span><br><span class="psub">Visa, Mastercard</span></span></label>
+
+          <div class="cko-sec-lbl">Order Summary</div>
+          <div id="ckoSummary"></div>
+
+          <button class="cko-place" onclick="placeOrder()"><span class="icn-svg me-2"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><circle cx='12' cy='12' r='10'/><path d='M8 12.5l2.5 2.5L16 9' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg></span>Place Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade auth" id="authMod" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div id="authContent">
+        <div class="auth-hero">
+          <button type="button" class="ac" data-bs-dismiss="modal"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.4' stroke-linecap='round'><line x1='5' y1='5' x2='19' y2='19'/><line x1='19' y1='5' x2='5' y2='19'/></svg></span></button>
+          <div class="ic">RM</div>
+          <h3>RM LUXURY</h3>
+          <p>Clothes Collection &middot; Members Club</p>
+        </div>
+        <div class="auth-tabs">
+          <button class="auth-tab on" id="atSignIn" onclick="switchAuthTab('signin')">Sign In</button>
+          <button class="auth-tab" id="atSignUp" onclick="switchAuthTab('signup')">Create Account</button>
+        </div>
+        <div class="auth-body" id="authBody">
+          <div class="auth-lbl">Email Address</div>
+          <input type="email" class="auth-input" id="authEmail" placeholder="you@example.com">
+          <div class="auth-err" id="authErrEmail">Please enter a valid email address</div>
+          <div class="auth-lbl">Password</div>
+          <input type="password" class="auth-input" id="authPass" placeholder="Enter your password" style="margin-bottom:6px;">
+          <div class="auth-err" id="authErrPass" style="margin-bottom:6px;">Password must be at least 6 characters</div>
+          <a class="auth-fp" id="authFP" href="#" onclick="event.preventDefault();toast('Password reset link sent (demo)')">Forgot password?</a>
+          <button class="auth-submit" id="authSubmitBtn" onclick="doAuth()">SIGN IN &rarr;</button>
+          <div class="auth-div">or continue with</div>
+          <div class="auth-socials">
+            <button class="auth-soc" onclick="socialAuth('Google')"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24'><path fill='#4285F4' d='M21.6 12.23c0-.68-.06-1.33-.17-1.96H12v3.71h5.4a4.62 4.62 0 0 1-2 3.03v2.52h3.23c1.9-1.75 2.97-4.32 2.97-7.3z'/><path fill='#34A853' d='M12 22c2.43 0 4.47-.8 5.96-2.18l-3.23-2.52c-.9.6-2.04.96-2.73.96-2.1 0-3.88-1.42-4.52-3.33H4.13v2.59A9.99 9.99 0 0 0 12 22z'/><path fill='#FBBC05' d='M7.48 14.93a6 6 0 0 1 0-3.86V8.48H4.13a10 10 0 0 0 0 9.04l3.35-2.59z'/><path fill='#EA4335' d='M12 6.58c1.32 0 2.5.45 3.44 1.35l2.87-2.87A9.7 9.7 0 0 0 12 2a9.99 9.99 0 0 0-7.87 4.48l3.35 2.59c.64-1.91 2.42-3.33 4.52-3.33z'/></svg></span> Google</button>
+            <button class="auth-soc" onclick="socialAuth('Facebook')"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='#1877F2'><path d='M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.5.3v2.7h-1.4c-1.4 0-1.8.8-1.8 1.7V12h3.1l-.5 2.9h-2.6v7A10 10 0 0 0 22 12z'/></svg></span> Facebook</button>
+            <button class="auth-soc" onclick="socialAuth('Apple')"><span class="icn-svg"><svg width='1em' height='1em' viewBox='0 0 24 24' fill='currentColor'><path d='M16.4 1c.1 1.1-.3 2.2-1 3-.7.8-1.9 1.5-3 1.4-.1-1.1.3-2.2 1-3 .8-.8 2-1.4 3-1.4zM20.8 17.2c-.5 1.1-.8 1.6-1.5 2.6-1 1.4-2.4 3.2-4.1 3.2-1.5 0-1.9-1-3.9-1-2 0-2.5 1-4 1-1.7 0-3-1.6-4-3-2.7-3.8-3-8.4-1.3-10.8 1.2-1.7 3.1-2.8 4.9-2.8 1.9 0 3.1 1 4.6 1 1.5 0 2.4-1 4.6-1 1.6 0 3.3.9 4.5 2.4-4 2.2-3.3 7.9.2 8.4z'/></svg></span> Apple</button>
+          </div>
+          <div class="auth-foot" id="authFoot">New to RM Luxury? <a onclick="switchAuthTab('signup')">Create an account</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
